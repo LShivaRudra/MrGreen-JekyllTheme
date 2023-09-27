@@ -111,7 +111,7 @@ post:
 # for post-list layout
 post-list:
   title: Blog
-  button_name: Blog
+  button_name: Projects and Blogs
   upside_down_tabs:
     tab:
       all: All
