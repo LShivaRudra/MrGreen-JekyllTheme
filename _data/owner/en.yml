@@ -13,13 +13,13 @@ name: "Shiva Rudra Lolla"
 # home page top header texts
 home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
-  top_header_line1: "$site_welcome"
+  #top_header_line1: ""
   # if commented, top header will be a single line
-  top_header_line2: "$site_brand"
+  #top_header_line2: ""
 
 # about page sub title
 about:
-  sub_title: "$site_sample"
+  sub_title: "Hi, I'm Shiva, a Robotics enthusiast. Looking forward to collaborate in the field of Aerial Vehicles and Computer Vision."
 
 # if you don't want to add copyright year, comment or leave it blank.
 # the year during which the claimed copyright for the work was first asserted.
@@ -49,7 +49,7 @@ meta_common_description: "Your meta description."
 # comment to remove any contact item
 contacts:
   - github: "LShivaRudra"
-  - email: "shivarudralolla"
+  - email: "f20201246@hyderabad.bits-pilani.ac.in"
   - linkedin: "Shiva Rudra Lolla"
   - twitter: "ShivaRudraLolla"
   #- mastodon: ""
