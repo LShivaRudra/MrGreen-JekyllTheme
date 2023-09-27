@@ -33,12 +33,12 @@ img: ":about.jpg"
 # exclude from search engines
 #search_engine_exclude: true
 # to disable this page, simply set published: false or delete this file
-published: false
+#published: false
 ---
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
 {%- include util/auto-content-generator.liquid -%}
-{{ website_info_text_first }}
+{{Hope you are doing good today!}}
 
-{{ website_info_text_second }}
+{{ Hi, I'm Shiva, a final year Undergrad at Bits Pilani. I'm currently working as a Research Intern at the Robotics Research Centre, IIIT Hyderabad. My field of work involves Path Planning and SLAM of UAVs.}}
