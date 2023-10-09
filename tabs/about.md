@@ -51,5 +51,5 @@ I'm currently working as an undergraduate reseracher under the supervision of [D
 <!--Extended CV (Web Version):  -->
 
 **Personal Email**: shivarudralolla@gmail.com \\
-**Institue Email**: f20201246@hyderabad.bits-pilani.ac.in \\
+**Institute Email**: f20201246@hyderabad.bits-pilani.ac.in \\
 **Web**: [https://LShivaRudra.github.io](https://LShivaRudra.github.io) 
