@@ -16,11 +16,11 @@ img: ":ROV/lqr.png"
 #comments_disable: true
 
 # publish date
-date: 2022-01-15 10:04:30 +0900
+date: 2023-01-09 10:04:30 +0900
 
 # seo
 # if not specified, date will be used.
-#meta_modify_date: 2022-01-01 10:04:30 +0900
+#meta_modify_date: 2023-01-09 10:04:30 +0900
 # check the meta_common_description in _data/owner/[language].yml
 #meta_description: ""
 
