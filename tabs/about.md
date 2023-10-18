@@ -49,7 +49,7 @@ I'm currently working as an undergraduate reseracher under the supervision of [D
 <!--**CV**: [Google Drive Link](https://drive.google.com/file/d/1G_3FIA0rCt7_YYm5kt6Rej2kVYASRaxR/view?usp=sharing)  -->
 
 <!--Extended CV (Web Version):  -->
-
+**CV**: [Google Drive Link](https://drive.google.com/file/d/1BMEpjTbwy-WErzlEtZb4yJVN8P5DTBmK/view?usp=sharing) 
 **Personal Email**: shivarudralolla@gmail.com \\
 **Institute Email**: f20201246@hyderabad.bits-pilani.ac.in \\
 **Web**: [https://LShivaRudra.github.io](https://LShivaRudra.github.io) 
