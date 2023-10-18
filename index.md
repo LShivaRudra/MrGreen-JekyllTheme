@@ -38,6 +38,6 @@ img: ":home-heading.jpg"
 ---
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
-Hey there! I'm Shiva. Welcome to my portfolio website. 
+Hey there! I'm **Shiva Rudra**. Welcome to my portfolio website. 
 Checkout my [about]({{ site.baseurl }}{% link tabs/about.md %}) and [project]({{ site.baseurl }}{% link tabs/blog/index.html %}) pages to know more about me and my work.
 {{ website_info_text_second }}
