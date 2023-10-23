@@ -11,7 +11,7 @@ category: Projects
 # multiple tag entries are possible
 tags: [Python, Deep Learning, Image Processing]
 # thumbnail image for post
-img: ":DL/3.png"
+img: ":DL/6.png"
 # disable comments on this page
 #comments_disable: true
 

@@ -16,7 +16,7 @@ img: ":WB/25.png"
 #comments_disable: true
 
 # publish date
-date: 2023-01-09 10:04:30 +0900
+date: 2023-05-10 10:04:30 +0900
 
 # seo
 # if not specified, date will be used.
