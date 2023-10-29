@@ -207,6 +207,7 @@ Next, create a folder in **voxblox_ros** package and name it as scripts. In it, 
 
 The code for these files are as follows:
 - **map_baselink_pub.py**:
+
 ```python
 #!/usr/bin/env python3
 # ROS python API
@@ -239,6 +240,7 @@ if __name__ == '__main__':
 ```
 
 - **waypoints_rvizinteract.py**:
+
 ```python
 #!/usr/bin/env python3
 # ROS python API
