@@ -53,12 +53,12 @@ In this, raycasting is done and the distance from the center of the sensor to th
 > Image Source: [Voxfield](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/pan2022iros.pdf)
 
 where:
-pj: the coordinates of the point where the ray hits 
-sk: coordinates of the point from where light is emitted from the sensor
-xi: coordinates of the center of the voxel in global reference frame
+- pj: the coordinates of the point where the ray hits 
+- sk: coordinates of the point from where light is emitted from the sensor
+- xi: coordinates of the center of the voxel in global reference frame
 
 ### Non Projective TSDF:
-In this, raycasting is done similar to that of the Projected TSDF. Here, the voxel TSDF gradient is calculated by taking the weighted average of the normals on the surface where the raycast hits. This gradient is then used to get the non projective TSDF. This method **voxfield**. The math follows:
+In this, raycasting is done similar to that of the Projected TSDF. Here, the voxel TSDF gradient is calculated by taking the weighted average of the normals on the surface where the raycast hits. This gradient is then used to get the non projective TSDF. This method is used in **voxfield**. The math follows:
 
 > Image Source: [Voxfield](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/pan2022iros.pdf)
 
@@ -95,14 +95,15 @@ This representation is used in for checking collisions and computing the collisi
 - For an occupied voxel, it is the distance to the nearest free voxel.
 - For a free voxel, it is the distance to the nearest occupied voxel.
 In general, the ESDFs of all the voxels in the map are calculated. If the SDF is:
-- positive(+1), the voxel is within the obstacle
-- negative(-1), the voxel is outside the obstacle
-- zero(0), voxel is on the obstacle surface
+    - positive(+1), the voxel is within the obstacle
+    - negative(-1), the voxel is outside the obstacle
+    - zero(0), voxel is on the obstacle surface
 
 So, this value is added to the cost which increases or decreases depending on the voxel location according to the sensor reading. This cost is then minimized for path planning purposes.
 
 ## Implementation of 3D mapping using Voxfield:
 Follow the steps to install the framework:
+
 ```bash
 cd ~/Documents/ && mkdir -p voxfield_ws/src && cd voxfield_ws/src
 cd ~/Documents/voxfield_ws && catkin build
@@ -110,28 +111,35 @@ cd ~/Documents/voxfield_ws
 git clone https://github.com/VIS4ROB-lab/voxfield.git
 wstool init . ./voxfield/voxfield_https.rosinstall
 wstool update
+cd ~/Documents/voxfield_ws
+catkin build voxblox_ros
 ```
 
-Next, we need to setup the camera module on the iris drone used in this [blog](https://lshivarudra.github.io/posts/2023-6-20-SITL_poswp):
+Next, we need to setup the camera module on the iris drone(this drone was used in this [blog](https://lshivarudra.github.io/posts/2023-6-20-SITL_poswp)):
 - Navigate to the launch files in the PX4-Autopilot repo(Assuming you have VSCode, else you can open it manually):
+
 ```bash
 cd ~/Documents/PX4-Autopilot/src/PX4-Autopilot
 code .
 ```
+
 Change the following two files:
 - ~/Documents/PX4-Autopilot/src/PX4-Autopilot/launch/mavros_posix_sitl.launch:
 Change line 16 to:
+
 ```xml
 <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/iris_depth_camera/iris_depth_camera.sdf"/>
 ```
 
 - ~/Documents/PX4-Autopilot/src/PX4-Autopilot/launch/posix_sitl.launch:
 Change line 16 to:
+
 ```xml
 <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/iris_depth_camera/iris_depth_camera.sdf"/>
 ```
 
 Open a new terminal and enter:
+
 ```bash
 cd ~/Documents/PX4-Autopilot/src/PX4-Autopilot
 source ~/Documents/mavros_ws/devel/setup.bash
@@ -140,6 +148,7 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
 roslaunch px4 mavros_posix_sitl.launch
 ```
+
 You should now be able to see iris with a depth camera in gazebo:
 
 
@@ -196,7 +205,7 @@ The above when launched will do the following:
 - It will run the ros node called **voxblox_node** with pointcloud topic as "**/camera/depth/points**" and sensor frame "**camera_link**". 
 - It creates a static transform between **map** and **world** with no translation and rotation between both the frames.
 - It will open the rviz file(kitti_25cm.rviz) the configuration of which is already provided in the voxfield framework.
-- It will rin the nodes in the files: 
+- It will run the nodes in the files: 
 	- **map_baselink_pub.py**: this publishes the dynamic transform between the map frame and the baselink frame using the tf broadcaster object.
 	- **waypoints_rvizinteract.py**: this allows to provide the waypoint to the drone directly with the rviz 'Nav 2D' interaction tool.
 
@@ -450,6 +459,7 @@ if __name__ == '__main__':
 Finally, in two new terminals, launch the following:
 - **Terminal 1:** Start gazebo with iris-depth_camera in it.
 - **Terminal 2:** Launch the simulation.launch:
+
 ```bash
 cd ~/Documents/voxfield_ws
 source devel/setup.bash
