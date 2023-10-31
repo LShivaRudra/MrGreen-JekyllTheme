@@ -39,17 +39,18 @@ img: ":about.jpeg"
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
 
-Hi, I'm **Shiva**, a *final year undergrad* at *BITS Pilani*. I have a strong enthusiasm for *Aerial Robotics* and *Computer Vision*, and what captivates me the most is the practical application of algorithms within these domains.
+ I'm a **final year undergrad** at **BITS Pilani, Hyderabad Campus**. I have a strong enthusiasm for **Aerial Robotics** and **Computer Vision**, and what captivates me the most is the practical application of algorithms within these domains.
 
-I'm currently working as an undergraduate reseracher under the supervision of [Dr.K. Madhava Krishna](https://robotics.iiit.ac.in/faculty_mkrishna/) at the [Robotics Research Centre, IIIT Hyderabad - India](https://robotics.iiit.ac.in//) exploring Path Planning and SLAM for UAVs.
+I'm currently working as an undergraduate reseacher under the supervision of [Dr.K. Madhava Krishna](https://robotics.iiit.ac.in/faculty_mkrishna/) at the [Robotics Research Centre, IIIT Hyderabad - India](https://robotics.iiit.ac.in//) exploring Path Planning and SLAM for UAVs. Through this internship, I have gained a hands-on experience of planners and mapping techniques for drones. 
 
+I previously worked in the field of **Control and Dynamics** for robots such as: **Underwater Rover** and **Wheeled Biped**.
 
 <!-- **CV**: [Google Drive Link](https://drive.google.com/file/d/1LYTDRyFuUPKfe1H1_sCX-ffLA0Csu08k/view?usp=sharing)  -->
 
 <!--**CV**: [Google Drive Link](https://drive.google.com/file/d/1G_3FIA0rCt7_YYm5kt6Rej2kVYASRaxR/view?usp=sharing)  -->
 
 <!--Extended CV (Web Version):  -->
-**Resume**: [Google Drive Link](https://drive.google.com/file/d/1QdfVTep31IN3IL9B749hrXfZhxrCKbsG/view?usp=sharing) \\
+**Resume**: [Google Drive Link](https://drive.google.com/file/d/1m6XaczqkmodGNjs5Mt2jAOt701xV6JJY/view?usp=sharing) \\
 **Personal Email**: shivarudralolla@gmail.com \\
 **Institute Email**: f20201246@hyderabad.bits-pilani.ac.in \\
 **Web**: [https://LShivaRudra.github.io](https://LShivaRudra.github.io) 
