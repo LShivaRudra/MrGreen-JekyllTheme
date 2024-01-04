@@ -50,7 +50,7 @@ I previously worked in the field of **Control and Dynamics** for robots such as:
 <!--**CV**: [Google Drive Link](https://drive.google.com/file/d/1G_3FIA0rCt7_YYm5kt6Rej2kVYASRaxR/view?usp=sharing)  -->
 
 <!--Extended CV (Web Version):  -->
-**Resume**: [Google Drive Link](https://drive.google.com/file/d/1m6XaczqkmodGNjs5Mt2jAOt701xV6JJY/view?usp=sharing) \\
+**Resume**: [Google Drive Link](https://drive.google.com/file/d/16FpgAHdvNrt-McGgPYEAGREkMDOOGOJo/view?usp=sharing) \\
 **Personal Email**: shivarudralolla@gmail.com \\
 **Institute Email**: f20201246@hyderabad.bits-pilani.ac.in \\
 **Web**: [https://LShivaRudra.github.io](https://LShivaRudra.github.io) 
