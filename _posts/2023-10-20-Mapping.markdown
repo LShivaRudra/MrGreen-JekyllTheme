@@ -1,0 +1,70 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_mapping
+title: "Implementing ESDF Mapping with VINS"
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: L Shiva Rudra
+# multiple category is not supported
+category: Projects
+# multiple tag entries are possible
+tags: [Mapping, VINS, Python, C++, ROS]
+# thumbnail image for post
+img: ":Mapping/f.png"
+# disable comments on this page
+#comments_disable: true
+
+# publish date
+date: 2023-10-20 10:04:30 +0900
+
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2023-01-09 10:04:30 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+## Summary
+
+In this work, pointcloud data from the Realsense D455 camera and odometry from VINS estimator module are fed as inputs to the Voxfield mapping framework. Occupancy and ESDF maps are shown in visualization.
+
+## Work Pipeline
+
+![Pipeline](:Mapping/i.png)
+
+## Results
+
+### Output of VINS estimator:
+
+![VINS](:Mapping/e.png)
+
+### ESDF map for a small region:
+
+![ESDF](:Mapping/f.png)
+
+### Occupancy map of the lab while implementing VINS:
+
+![map1](:Mapping/g.png)
+
+![map2](:Mapping/h.png)
+
+### Video Results:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nKO_ds5VaFg?si=JZnoUhTXfWRBph9L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oRt61GfpLrM?si=BymV5UJi6bKZbzej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

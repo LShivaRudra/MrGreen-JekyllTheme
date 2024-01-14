@@ -50,6 +50,7 @@ The kinematics of the robot are given as follows:
 
 
 ![1.png](:WB/1.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full) 
 
 ## Self-Balance Mode
@@ -59,6 +60,7 @@ x_dot(t) = Ax(t) + Bu(t).  The LQR controller works only on linear systems. But,
 
 
 ![2.png](:WB/2.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 On converting it into matrix form by taking 6 states:
@@ -67,21 +69,25 @@ On converting it into matrix form by taking 6 states:
 
 
 ![31.png](:WB/31.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 
 
 
 ![3.png](:WB/3.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 
 ![4.png](:WB/4.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 where:
 
 ![5.png](:WB/5.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 Here, 
@@ -104,12 +110,14 @@ The robot's jump control utilizes fuzzy Proportional Differentiation (PD) contro
 
 
 ![6.png](:WB/6.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 ### Mathematical Model for Jumping Mode:
 The following equations are used to find out the torque of the hip joint as a function of its angle:
 
 ![7.png](:WB/7.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 Here :
@@ -121,6 +129,7 @@ Here :
 
 
 ![8.png](:WB/8.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 Where 𝞃 is the torque of the hip joint.
@@ -131,6 +140,7 @@ Where 𝞃 is the torque of the hip joint.
 From the kinematics schematic of the robot, the following transformation matrices can be found out:
 
 ![9.png](:WB/9.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 As coordinate {3} represents the motor’s position and {0} represents the wheel position, so, the length of the robot can be found by using the [0T3] matrix.  (Assuming that center of mass of the robot lies near motor)
@@ -147,6 +157,7 @@ The Mass of body is calculated as follows:
 
 
 ![10.png](:WB/10.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 Upper Half of body consists of -
@@ -174,7 +185,9 @@ So the values are taken as follows:
 - D=0.3m
 
 The following model is made for the self-balancing mode using LQR controller:
+
 ![11.png](:WB/11.png)
+
 - Disturbance(using Pulse Generator) is added to the Plant input.
 - The six states are observed in the o/p scope.
 
@@ -183,6 +196,7 @@ The following model is made for the self-balancing mode using LQR controller:
 ### Trajectory Planning:
 
 ![12.png](:WB/12.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 - We have taken Hmax as 0.5 m. This is used to estimate the vertical velocity of the robot when it is about to take off.
@@ -190,10 +204,12 @@ The following model is made for the self-balancing mode using LQR controller:
 
 
 ![13.png](:WB/13.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 
 ![14.png](:WB/14.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 - We used this as the trajectory of the vertical component of the COM(hip joint) during the takeoff.
@@ -201,6 +217,7 @@ The following model is made for the self-balancing mode using LQR controller:
 **Control Block Diagram for Jumping Mode:**
 
 ![15.png](:WB/15.png)
+
 > *Image Source:* [#1](https://www.frontiersin.org/articles/10.3389/fnbot.2022.1066714/full)
 
 - This is the control block diagram which we used to control the hip joint angle and its derivative during the flight phase.
@@ -217,25 +234,30 @@ qd, qd_dot and qd_ddot are the reference inputs. Where q represents the hip join
 - We used this information to build the following Simulink models:
 
 ![16.png](:WB/16.png)
+
 This estimates the torque as a function of time taking takeoff time as 0.45 seconds.
 
 **Control Design for q, q_dot control during takeoff:**
 
 ![17.png](:WB/17.png)
+
 We built this system to control the q, q_dot while takeoff where q is the hip joint angle. But due to certain issues like the number of rules and membership functions of the fuzzy controller and due to the lack of proper reference trajectory equations, we could not get proper results for the torque and the control variables: 
 
 # Results
 For testing, we set initial angles of robot as 15°, 30°, and 45°, and then we observed how it recovers by accelerating its bottom wheel
 
 **15°:**
+
 ![18.png](:WB/18.png)
 
 
 **30°:**
+
 ![19.png](:WB/19.png)
 
 
 **45°:**
+
 ![20.png](:WB/20.png)
 
 Using these results and aiming that the robot should be able to recover from 45° with max leg length, the specifications of motors for forward translational motion are found as:
@@ -253,6 +275,7 @@ Initial Angle=45 degrees, Hip angle=120 degrees
 
 
 Initial Angle=60 degrees, Hip angle=120 degrees
+
 ![23.png](:WB/23.png)
 
 
@@ -265,10 +288,12 @@ The simulation results can be used to obtain the motor specifications.
 ## Jumping Mode
 
 ![25.png](:WB/25.png)
+
 This is the variation of the torque. We can clearly see that the torque increases in the negative direction while retraction and then increases in the positive while jumping. (Note that the jumping phase involves retraction followed by jumping).
 
 
 ![26.png](:WB/26.png)
+
 These are the plots for the q and q_dot. The parabolic projectile reference is taken into consideration.
 
 
@@ -287,6 +312,7 @@ The CAD model for the robot is as follows:
 
 
 **Gearbox**
+
 ![30.png](:WB/30.png)
 
 <!-- The following work has been referred for this project:

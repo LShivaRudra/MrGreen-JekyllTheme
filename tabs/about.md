@@ -39,7 +39,7 @@ img: ":about.jpeg"
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
 
- I'm a **final year undergrad** at **BITS Pilani, Hyderabad Campus**. I have a strong enthusiasm for **Aerial Robotics** and **Computer Vision**, and what captivates me the most is the practical application of algorithms within these domains.
+ I'm a **final year undergrad** at **BITS Pilani, Hyderabad Campus**. I have a strong enthusiasm for **Aerial Robotics** and **Autonomous Navigation**, and what captivates me the most is the practical application of algorithms within these domains.
 
 I'm currently working as an undergraduate reseacher under the supervision of [Dr.K. Madhava Krishna](https://robotics.iiit.ac.in/faculty_mkrishna/) at the [Robotics Research Centre, IIIT Hyderabad - India](https://robotics.iiit.ac.in//) exploring Path Planning and SLAM for UAVs. Through this internship, I have gained a hands-on experience of planners and mapping techniques for drones. 
 
