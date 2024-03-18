@@ -6,7 +6,7 @@ brand: "Shiva Rudra Lolla"
 
 # text below the brand name
 #brand_sub_text: "$site_sample"
-brand_sub_text: "Robotics | Computer Vision"
+brand_sub_text: "Robotics | Motion Planning"
 # used for seo meta post author (if it's not defined in post)
 name: "Shiva Rudra Lolla"
 
@@ -49,7 +49,7 @@ meta_common_description: "Your meta description."
 # comment to remove any contact item
 contacts:
   - github: "LShivaRudra"
-  - email: "f20201246@hyderabad.bits-pilani.ac.in"
+  - email: "shivarudralolla@gmail.com"
   - linkedin: "shiva-rudra-lolla-11959b209"
   - twitter: "ShivaRudraLolla"
   #- mastodon: ""
